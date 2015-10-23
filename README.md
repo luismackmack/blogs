@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 # BlogSystrix
+=======
+# blogs
+# Luis Garcia / Web Developer
+Autentificación de usuario,  Publicación de Post y Comments
+>>>>>>> 06088d816f9ebe51d4e4858bae856da52636bb0b
 
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`
   2. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   3. Start Phoenix endpoint with `mix phoenix.server`
+<<<<<<< HEAD
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
@@ -17,3 +24,5 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+=======
+>>>>>>> 06088d816f9ebe51d4e4858bae856da52636bb0b
