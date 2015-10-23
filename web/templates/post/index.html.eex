@@ -1,0 +1,48 @@
+<h2>Mis Posts</h2>
+<%= link "New post", to: post_path(@conn, :new), class: "btn btn-primary btn-xs" %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Total Comentarios</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for {post, count} <- @posts_user do %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= count %></td>
+
+      <td class="text-right">
+        <%= link "Ver mas", to: post_path(@conn, :show, post), class: "btn btn-default btn-xs" %>
+        <%= link "Editar", to: post_path(@conn, :edit, post), class: "btn btn-default btn-xs" %>
+        <%= link "Borrar", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<h2>Otros Posts</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Total Comentarios</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for {post, count} <- @other_posts do %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= count %></td>
+
+      <td class="text-right">
+        <%= link "Ver mas", to: post_path(@conn, :show, post), class: "btn btn-default btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

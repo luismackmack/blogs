@@ -1,0 +1,18 @@
+<h3>Comments: </h3>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Usuario</th>
+			<th>Comentario</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= for comment <- @post.comments do %>
+
+			<tr>
+				<td><%= comment.user.nombre %></td>
+				<td><%= comment.content %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
